@@ -12,11 +12,24 @@
 
     <link href="{{ mix('css/app.css') }}" rel="stylesheet">
 
+    <meta property="fb:app_id" content="1420267864675222" />
+
     <meta property="og:url"                content="http://ghostedonfox.com" />
     <meta property="og:type"               content="website" />
+
+    @if ( isset($userid) && file_exists(public_path().'/storage/userimages/'.$userid.'.png') )
+
+    <meta property="og:title"              content="I found my Partner in the Paranormal" />
+    <meta property="og:description"        content="Find yours here!" />
+    <meta property="og:image"              content="{{ asset('storage/userimages/'.$userid.'.png') }}" />
+
+    @else
+
     <meta property="og:title"              content="Who's your Partner in the Paranormal?" />
     <meta property="og:description"        content="Find out here!" />
     <meta property="og:image"              content="{{ url('images/ghosted-og-share.jpg') }}" />
+
+    @endif
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->

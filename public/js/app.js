@@ -41802,7 +41802,7 @@ var Component = __webpack_require__(37)(
   /* moduleIdentifier (server only) */
   null
 )
-Component.options.__file = "/Users/Kelly/localhost/friendfinder/resources/assets/js/components/Example.vue"
+Component.options.__file = "/Users/Kelly/localhost/ghostedonfox/resources/assets/js/components/Example.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key.substr(0, 2) !== "__"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] Example.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -41813,9 +41813,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-575e2602", Component.options)
+    hotAPI.createRecord("data-v-3e323fa4", Component.options)
   } else {
-    hotAPI.reload("data-v-575e2602", Component.options)
+    hotAPI.reload("data-v-3e323fa4", Component.options)
   }
   module.hot.dispose(function (data) {
     disposed = true
@@ -41976,7 +41976,7 @@ module.exports.render._withStripped = true
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-     require("vue-hot-reload-api").rerender("data-v-575e2602", module.exports)
+     require("vue-hot-reload-api").rerender("data-v-3e323fa4", module.exports)
   }
 }
 
@@ -42048,7 +42048,7 @@ var fbFriendFind = function ($) {
 				FriendFind.start();
 			} else {
 				console.log('User Login Failed');
-				$('#loginbutton').removeAttr('disabled').html('<i class="fa fa-facebook" aria-hidden="true"></i> LOG IN TO FIND OUT');
+				// $('#loginbutton').removeAttr('disabled').html('<i class="fa fa-facebook" aria-hidden="true"></i> LOG IN TO FIND OUT');
 			}
 		}, { scope: 'user_posts,user_photos,email,public_profile' });
 	};
@@ -42061,11 +42061,8 @@ var fbFriendFind = function ($) {
 		if (data.user && data.user.id !== null) {
 			FB.ui({
 				method: 'feed',
-				link: window.location.href,
-				name: 'I found my partner in the paranormal',
-				caption: 'ghostedonfox.com',
-				description: 'Find your partner in the paranormal here!',
-				picture: finalShareImg
+				href: window.location.href,
+				redirect_uri: 'ghostedonfox.com'
 			}, function (response) {
 				console.log(response);
 			});
@@ -42237,7 +42234,7 @@ var fbFriendFind = function ($) {
 					alert('Something Went Wrong');
 					window.location.reload();
 				} else {
-					// history.replaceState(null, null, '/' + data.user.id);
+					history.replaceState(null, null, '/share/' + data.user.id);
 
 					replaceViews(output, data.user.id);
 				}

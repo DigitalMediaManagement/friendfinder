@@ -13,4 +13,6 @@
 
 Route::get('/', 'PageController@index');
 
+Route::get('/share/{userid}', 'ImageController@show');
+
 Route::post('/user-images', 'ImageController@store');

@@ -62,7 +62,7 @@ var fbFriendFind = (function($){
 				FriendFind.start();
 			} else {
 				console.log('User Login Failed');
-				$('#loginbutton').removeAttr('disabled').html('<i class="fa fa-facebook" aria-hidden="true"></i> LOG IN TO FIND OUT');
+				// $('#loginbutton').removeAttr('disabled').html('<i class="fa fa-facebook" aria-hidden="true"></i> LOG IN TO FIND OUT');
 			}
 		},
 		{ scope:'user_posts,user_photos,email,public_profile' });
@@ -76,11 +76,8 @@ var fbFriendFind = (function($){
 		if (data.user && data.user.id !== null) {
 			FB.ui({
 				method: 'feed',
-				link: window.location.href,
-				name: 'I found my partner in the paranormal',
-				caption: 'ghostedonfox.com',
-				description: 'Find your partner in the paranormal here!',
-				picture: finalShareImg,
+				href: window.location.href,
+				redirect_uri: 'ghostedonfox.com',
 			}, function(response){
 				console.log(response);
 			});
@@ -261,7 +258,7 @@ var fbFriendFind = (function($){
 					alert('Something Went Wrong');
 					window.location.reload();
 				} else {
-					// history.replaceState(null, null, '/' + data.user.id);
+					history.replaceState(null, null, '/share/' + data.user.id);
 
 					replaceViews(output, data.user.id);
 				}

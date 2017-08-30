@@ -8,6 +8,11 @@ use Image;
 
 class ImageController extends Controller
 {
+	public function show($userid)
+	{
+		return view('app', ['userid' => $userid]);
+	}
+
 	public function store(Request $request)
 	{
 		$user = $request->input('user');
