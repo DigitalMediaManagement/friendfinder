@@ -7,6 +7,8 @@
 
 require('./bootstrap');
 
+require('./fittext');
+
 window.Vue = require('vue');
 
 /**
@@ -22,3 +24,8 @@ const app = new Vue({
 });
 
 require('./friend-finder');
+
+(function(){
+	$('span.top').fitText(.85);
+	$('span.bottom').fitText(1);
+})();

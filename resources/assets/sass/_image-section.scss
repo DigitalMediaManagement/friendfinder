@@ -1,6 +1,7 @@
 .friend-finder-container{
 	text-align: center;
 	text-transform: uppercase;
+	font-size: 14px;
 	a.show-logo{
 		display: inline-block;
 		margin-bottom: 40px;
@@ -11,19 +12,37 @@
 		max-width: 100%;
 		height: auto;
 	}
+	h1, h2{
+		font-family: $font-family-header;
+	}
 	h1{
-		font-size: 72px;
+		font-size: 14px;
+		// line-height: 56px;
+		margin: 0;
 		color: #ffffff;
-		// -webkit-text-stroke: 2px #67bdff;
-		text-shadow:
-			-2px -2px 0 #67bdff,
-			2px -2px 0 #67bdff,
-			-2px 2px 0 #67bdff,
-			2px 2px 0 #67bdff;
+		-webkit-text-stroke: 1px #67bdff;
+		// text-shadow:
+		// 	-1px -1px 0 #67bdff,
+		// 	1px -1px 0 #67bdff,
+		// 	-1px 1px 0 #67bdff,
+		// 	1px 1px 0 #67bdff;
+		span{
+			display: block;
+		}
+		span.top{
+			// font-size: 68px;
+			font-size: 4.85714em;
+		}
+		span.bottom{
+			// font-size: 56px;
+			font-size: 4em;
+		}
 	}
 	h2{
-		font-size: 30px;
+		font-size: 28px;
 		color: #20314d;
+		margin-top: 6px;
+		margin-bottom: 0;
 	}
 	p{
 		font-size: 14px;

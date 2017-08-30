@@ -8,6 +8,9 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>{{ config('app.name', 'Who\'s your Paranormal Partner?') }}</title>
 
+    <script src="https://use.typekit.net/afr7yxr.js"></script>
+    <script>try{Typekit.load({ async: true });}catch(e){}</script>
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <link href="{{ mix('css/app.css') }}" rel="stylesheet">
@@ -49,12 +52,14 @@
           <div class="col-md-6">
             <div class="friend-finder-container">
               <a class="show-logo" href="http://www.fox.com/ghosted" target="_blank"><img src="{{ url('images/ghosted-logo.png') }}" alt="Ghosted on Fox"></a>
-              <h1 class="sr sr-only">Who’s Your Partner
-              In the Paranormal?</h1>
-              <h2 class="sr sr-only">And Your go-to buddy for everything.</h2>
+              {{-- <h1 class="sr sr-only">Who’s Your Partner In the Paranormal?</h1> --}}
+              {{-- <h2 class="sr sr-only">And Your go-to buddy for everything.</h2> --}}
 
-              <img class="header-text" src="{{ url( 'images/header-text.png' ) }}" alt="Who’s Your Partner
-              In the Paranormal?">
+              <h1 class="before"><span class="top">Who’s Your Partner</span> <span class="bottom">In the Paranormal?</span></h1>
+              <h2 class="before">And Your go-to buddy for everything.</h2>
+
+              {{-- <img class="header-text" src="{{ url( 'images/header-text.png' ) }}" alt="Who’s Your Partner
+              In the Paranormal?"> --}}
 
               <div id="canvas">
                 <div class="img-section">
@@ -77,7 +82,6 @@
       <img class="bottom-right hidden-xs hidden-sm" src="{{ url('images/guys.png') }}" alt="Adam and Craig" width="788" height="939">
 
     </div>
-
 
     <script src="{{ mix('js/app.js') }}"></script>
   </body>

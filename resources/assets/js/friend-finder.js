@@ -27,6 +27,9 @@ var fbFriendFind = (function($){
 	 * Check if user is logged in on page load
 	 */
 	$(document).ready(function(){
+		$('span.top').fitText(.85);
+		$('span.bottom').fitText(1);
+		
 		$.ajaxSetup({ cache: true });
 		$.getScript('//connect.facebook.net/en_US/sdk.js', function(){
 			FB.init({
@@ -56,7 +59,6 @@ var fbFriendFind = (function($){
 	 * Use FB API for user login
 	 */
 	var login = function(){
-		// console.log('log in function here');
 		FB.login(function(response){
 			if (response.authResponse) {
 				FriendFind.start();
@@ -74,8 +76,6 @@ var fbFriendFind = (function($){
 	$('body').on('click', '#sharequizbutton', function(){
 		var finalShareImg = $(this).data('img');
 		if (data.user && data.user.id !== null) {
-			console.log(data.host+'/share/'+data.user.id);
-
 			FB.ui({
 				method: 'share',
 				display: 'popup',
@@ -242,8 +242,6 @@ var fbFriendFind = (function($){
 			    }
 			});
 
-			console.log(bestFriendArr);
-
 			$.ajax({
 				url : '/user-images',
 				method : 'POST',
@@ -254,8 +252,6 @@ var fbFriendFind = (function($){
 				}
 			})
 			.done(function(output){
-				console.log(output);
-
 				if (output.response === 'error') {
 					alert('Something Went Wrong');
 					window.location.reload();
@@ -277,8 +273,16 @@ var fbFriendFind = (function($){
 
 		var replaceViews = function(output, user_id){
 
+			console.log(output);
+
+			$('h1 .top').text(output.best_friend[0].name).fitText(1);
+			$('h1 .bottom').text('is your partner in the paranormal').fitText(1.8);
+
+			// Add Images
 			$('.left-image img').attr('src', output.user.img);
 			$('.right-image img').attr('src', output.best_friend[0].img);
+
+			// Add Button
 			$('button#loginbutton')
 				.after('<button id="sharequizbutton" class="btn btn-primary" data-img="'+output.img_path+'">SHARE</button>')
 				.remove();
