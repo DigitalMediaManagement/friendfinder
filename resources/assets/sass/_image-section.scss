@@ -48,6 +48,10 @@
 		font-size: 14px;
 		text-transform: none;
 		color: #ffffff;
+
+		max-width: 440px;
+	    font-size: 12px;
+	    margin: auto;
 		a{
 			color: #38a6fc;
 			text-decoration: none;
@@ -116,6 +120,13 @@
 			background: url(/images/space-bg.jpg);
 			background-size: cover;
 			transition: all 0.2s;
+
+			@media (max-width: $screen-md-max) {
+				width: 65%;
+			}
+			@media (max-width: $screen-xs-max) {
+				width: 90%;
+			}
 
 			&:hover{
 				box-shadow: 0 0 3px 3px rgba(255, 255, 255, 0.4);
