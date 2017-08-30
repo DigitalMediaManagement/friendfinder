@@ -24,8 +24,3 @@ const app = new Vue({
 });
 
 require('./friend-finder');
-
-(function(){
-	$('span.top').fitText(.85);
-	$('span.bottom').fitText(1);
-})();

@@ -27,8 +27,8 @@ var fbFriendFind = (function($){
 	 * Check if user is logged in on page load
 	 */
 	$(document).ready(function(){
-		$('span.top').fitText(.85);
-		$('span.bottom').fitText(1);
+		$('span.top').fitText(.9);
+		$('span.bottom').fitText(1.05);
 		
 		$.ajaxSetup({ cache: true });
 		$.getScript('//connect.facebook.net/en_US/sdk.js', function(){
