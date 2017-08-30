@@ -74,11 +74,13 @@ var fbFriendFind = (function($){
 	$('body').on('click', '#sharequizbutton', function(){
 		var finalShareImg = $(this).data('img');
 		if (data.user && data.user.id !== null) {
+			console.log(data.host+'/share/'+data.user.id);
+
 			FB.ui({
-				method: 'feed',
-				href: window.location.href,
-				redirect_uri: 'ghostedonfox.com',
-			}, function(response){
+				method: 'share',
+				display: 'popup',
+				href: 'http://'+data.host+'/share/'+data.user.id,
+			}, function (response) {
 				console.log(response);
 			});
 		} else {
@@ -258,6 +260,10 @@ var fbFriendFind = (function($){
 					alert('Something Went Wrong');
 					window.location.reload();
 				} else {
+					$('meta[property="og:title"]').attr('content', 'I found my Partner in the Paranormal');
+					$('meta[property="og:description"]').attr('content', 'Find yours here!');
+					$('meta[property="og:image"]').attr('content', output.img_path);
+
 					history.replaceState(null, null, '/share/' + data.user.id);
 
 					replaceViews(output, data.user.id);
