@@ -284,7 +284,7 @@ var fbFriendFind = (function($){
 
 			// Add Button
 			$('button#loginbutton')
-				.after('<button id="sharequizbutton" class="btn btn-primary" data-img="'+output.img_path+'">SHARE</button><br><div class="try-again">Not the right partner? <a href="/">try again!</a></div>')
+				.after('<button id="sharequizbutton" class="btn btn-primary" data-img="'+output.img_path+'">SHARE</button><div class="try-again">Not the right partner? <a href="/">try again!</a>')
 				.remove();
 		}
 

@@ -78,8 +78,9 @@
                   <div class="left-image"><img src="{{ url( 'images/blank.jpg' ) }}" alt="Left Image"></div>
                   <div class="right-image"><img src="{{ url( 'images/blank.jpg' ) }}" alt="Right Image"></div>
                 </div>
-
-                <button disabled id="loginbutton" class="btn btn-primary facebook"><i class="fa fa-facebook" aria-hidden="true"></i> LOG IN TO FACEBOOK TO FIND OUT</button>
+                <div class="button-container">
+                  <button disabled id="loginbutton" class="btn btn-primary facebook"><i class="fa fa-facebook" aria-hidden="true"></i> LOG IN TO FACEBOOK TO FIND OUT</button>
+                </div>
               </div>
 
               <p>By clicking [Log in to Facebook to Find Out], you agree to the <a target="_target" href="http://www.fox.com/policy">Fox Privacy Policy</a> and <a target="_target" href="http://www.fox.com/terms">Fox Terms Of Use</a></p>

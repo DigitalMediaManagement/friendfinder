@@ -59,7 +59,7 @@
 	}
 	#canvas{
 		position: relative;
-		margin-bottom: 30px;
+		margin-bottom: 60px;
 		&::before{
 			content: "";
 			display: block;
@@ -108,10 +108,13 @@
 			}
 		}
 
+		.button-container{
+			position: relative;
+			margin-top: -12%;
+		}
 		.btn{
 			position: relative;
 			width: 60%;
-			margin-top: -20%;
 			// margin-right: 3%;
 			padding: 12px;
 			z-index: 10;
@@ -145,6 +148,7 @@
 		}
 		.try-again{
 			color: $white;
+			margin-top: 12px;
 			a{
 				text-decoration: none;
 				&:hover{
