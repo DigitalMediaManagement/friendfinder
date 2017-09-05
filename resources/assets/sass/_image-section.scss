@@ -143,5 +143,14 @@
 				}
 			}
 		}
+		.try-again{
+			color: $white;
+			a{
+				text-decoration: none;
+				&:hover{
+					color: lighten($brand-primary, 20%);
+				}
+			}
+		}
 	}
 }
