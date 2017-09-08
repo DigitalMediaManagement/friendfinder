@@ -28,19 +28,17 @@
     <meta property="fb:app_id" content="1420267864675222" />
 
     <meta property="og:type"               content="website" />
+    <meta property="og:title"              content="Who’s Your Partner In The Paranormal?" />
+    <meta property="og:description"        content="Click here to find out your partner in the paranormal and your go to buddy for everything!" />
 
     @if ( isset($userid) && file_exists(public_path().'/storage/userimages/'.$userid.'.png') )
 
     <meta property="og:url"                content="http://ghostedonfox.com/share/{{ $userid }}" />
-    <meta property="og:title"              content="I found my Partner in the Paranormal" />
-    <meta property="og:description"        content="Find yours here!" />
     <meta property="og:image"              content="{{ asset('storage/userimages/'.$userid.'.png') }}" />
 
     @else
 
     <meta property="og:url"                content="http://ghostedonfox.com" />
-    <meta property="og:title"              content="Who's your Partner in the Paranormal?" />
-    <meta property="og:description"        content="Find out here!" />
     <meta property="og:image"              content="{{ url('images/ghosted-og-share.jpg') }}" />
 
     @endif
