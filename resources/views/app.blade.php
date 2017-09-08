@@ -81,7 +81,7 @@
                 </div>
               </div>
 
-              <p>By clicking [Log in to Facebook to Find Out], you agree to the <a target="_target" href="http://www.fox.com/policy">Fox Privacy Policy</a> and <a target="_target" href="http://www.fox.com/terms">Fox Terms Of Use</a></p>
+              <p>By clicking [Log in to Facebook to Find Out], you agree to the <a target="_target" href="https://www.fox.com/article/privacy-policy-597bbe4f6603660022fa8689/">Fox Privacy Policy</a> and <a target="_target" href="http://www.fox.com/terms">Fox Terms Of Use</a></p>
             </div>
           </div>
         </div>
