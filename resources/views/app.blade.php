@@ -19,7 +19,7 @@
       })(document);
     </script>
 
-    <link rel="shortcut icon" href="http://www.fox.com/sites/all/themes/fox/images/favicon.ico" />
+    <link rel="shortcut icon" href="/favicon.ico" />
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
