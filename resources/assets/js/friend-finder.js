@@ -76,6 +76,11 @@ var fbFriendFind = (function($){
 	$('body').on('click', '#sharequizbutton', function(){
 		var finalShareImg = $(this).data('img');
 		if (data.user && data.user.id !== null) {
+
+			if (typeof(ga) !== 'undefined') {
+				ga('send', 'event', 'Button', 'click', 'Share image to Facebook');
+			}
+
 			FB.ui({
 				method: 'share',
 				display: 'popup',
